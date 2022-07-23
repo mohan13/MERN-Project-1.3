@@ -19,8 +19,10 @@ const Trend = () => {
             <div className="leading-8 flex">
               <div>
                 <img src={val.Image} alt="" />
+                <div>
                 <h1>{val.product}</h1>
                 <p>{val.price}</p>
+                  </div>
               </div>
             </div>
           );

@@ -5,20 +5,20 @@ export const NavData =[{
 },
 {
     title:'Men',
-    path:"/"
+    path:"/men"
 },
 {
     title:'Women',
-    path:"/"
+    path:"/women"
 },
 {
     title:'Pages',
-    path:"/",
+    path:"/pages",
     icon:<AiOutlineDown/>
 },
 {
     title:'Contact',
-    path:"/"
+    path:"/contact"
 }]
 // export const topHeaderLeft=[{
 //     titleL:"About Us"

@@ -3,42 +3,45 @@ import {
   AiOutlineUser,
   AiOutlineShoppingCart,
   AiOutlineSearch,
+  AiOutlineMenu,
 } from "react-icons/ai";
 import { NavData } from "../NavData";
 import Icon from "../../Ui/icon";
-import Logo from "../../Images/logo.webp";
+import Logo from "../../Images/mainLogo.webp";
+import { Link } from "react-router-dom";
 const Toolbar = () => {
   return (
-    <div className="w-full">
-      <div className="w-full py-4 px-14  md:grid grid-cols-4 items-center">
-        <div className="mx-auto">
-          <img src={Logo} alt="" />
+    <div className="w-full grid">
+      <div className="py-4 flex justify-between px-6 md:px-14 bg-red-200 lg:grid grid-cols-4 w-full items-center">
+        <div className="w-32 md:w-40  hover:cursor-pointer  ">
+          <img src={Logo} alt="" className="w-full" />
         </div>
-        <div className="col-span-2 mx-2 hidden md:flex justify-between font-semibold text-base md:text-md">
+        <div className=" mx-2 col-span-2 hidden md:flex justify-between font-semibold text-base md:text-md">
           {NavData?.map((val, i) => {
             return (
               <div key={i}>
-                <div className="flex items-center">
+                <Link to={val.path} className="hidden lg:flex items-center">
                   {val.title}
                   {val.icon}
-                </div>
+                </Link>
               </div>
             );
           })}
         </div>
+       
         <div className="md:flex hidden justify-evenly">
           <Icon
-            Icon1={<AiOutlineSearch className="w-full h-full color-red " />}
+            Icon1={<AiOutlineSearch className="w-full h-full hover:cursor-pointer color-red " />}
           />
-          <Icon Icon1={<AiOutlineUser className="w-full h-full" />} />
-          <Icon Icon1={<AiOutlineShoppingCart className="w-full h-full" />} />
+          <Icon Icon1={<AiOutlineUser className="  hover:cursor-pointer  w-full h-full" />} />
+          <Icon Icon1={<AiOutlineShoppingCart className="  hover:cursor-pointer  w-full h-full" />} />
+        </div>
+        <div className="lg:hidden">
+          <AiOutlineMenu className="w-8 h-8 bg-yello-200" />
         </div>
       </div>
-      <div className="bg-black text-white py-3">
-        <p>
-          Sale Up To 50% Biggest Discounts. Hurry! Limited Perriod Offer Shop
-          Now
-        </p>
+      <div className="bg-black text-md text-white py-3">
+        Sale Up To 50% Biggest Discounts. Hurry! Limited Perriod Offer Shop Now
       </div>
     </div>
   );
