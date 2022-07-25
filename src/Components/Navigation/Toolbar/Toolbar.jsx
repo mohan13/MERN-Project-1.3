@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 const Toolbar = () => {
   return (
     <div className="w-full grid">
-      <div className="py-4 flex justify-between px-6 md:px-14 bg-red-200 lg:grid grid-cols-4 w-full items-center">
+      <div className="py-4 flex justify-between px-6 md:px-14 lg:grid grid-cols-4 w-full items-center">
         <div className="w-32 md:w-40  hover:cursor-pointer  ">
           <img src={Logo} alt="" className="w-full" />
         </div>
@@ -20,7 +20,7 @@ const Toolbar = () => {
           {NavData?.map((val, i) => {
             return (
               <div key={i}>
-                <Link to={val.path} className="hidden lg:flex items-center">
+                <Link to={val.path} className="hidden lg:flex items-center hover:text-red-500">
                   {val.title}
                   {val.icon}
                 </Link>

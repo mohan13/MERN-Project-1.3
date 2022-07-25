@@ -1,8 +1,8 @@
-import latestImg from '../../../Images/latest.webp'
-import latestImg1 from '../../../Images/latest1.webp'
-import latestImg2 from '../../../Images/latest2.webp'
+import latestImg from '../../Images/latest.webp'
+import latestImg1 from '../../Images/latest1.webp'
+import latestImg2 from '../../Images/latest2.webp'
 
-export const TrendData =[
+export const MenProductData =[
     {
         Image:latestImg,
         product:"Cashmere Tank + bag",

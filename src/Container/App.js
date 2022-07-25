@@ -11,6 +11,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home/>} />
             <Route path="/men" element={<Men/>} />
+            <Route path="/women" element={<Men/>} />
           </Routes>
         </Layout>
       </Router>

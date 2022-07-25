@@ -3,9 +3,14 @@
   margin:0;
   box-sizing: border-box;
 }
-div{
-  font-family: sans-serif;
+select{
+  outline: none;
+  padding:5px;
+  border:solid 1px;
+  border-radius: 20px;
+
 }
+
 h1{
   font-family:Arial;
   font-weight: 500;

@@ -4,9 +4,9 @@ const Service = () => {
   return (
     <div className='grid grid-cols-1 md:grid-cols-4 gap-8 mx-14'>
         {
-            ServiceData?.map((val)=>{
+            ServiceData?.map((val,i)=>{
                 return(
-                    <div className='flex flex-col items-center md:border-r-2'>
+                    <div key={i} className={`flex flex-col items-center ${i===ServiceData.length-1?"":"md:border-r-2"}`}>
                         <img src={
                             val.Image
                         }

@@ -13,7 +13,7 @@ const Banner = () => {
         }}
       >
        <div className="px-8 font-sans ">
-       <h2 className="font- text-red-500 text-xl md:text-3xl">Fashion Sale</h2>
+       <h2 className="font-script text-red-500 text-xl md:text-3xl">Fashion Sale</h2>
         <h1 className="font-mono font-bold text-2xl md:text-5xl my-4">Minimal Male Size</h1>
         <p className=" text-md md:text-xl">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
