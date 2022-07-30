@@ -4,7 +4,7 @@ import ShopMen from "../Page-Components/MenComponents/ShopMen";
 const Men = () => {
   return (
     <div>
-      <MenHead />
+      <MenHead/>
       <ShopMen/>
     </div>
   );

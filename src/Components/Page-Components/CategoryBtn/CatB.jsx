@@ -1,12 +1,13 @@
 import React from "react";
 import { CatData } from "./CategoryData";
+// import { selectData,childs } from "../CategoryBtn/CategoryData";
 // import {oprtions} from '../CategoryData'
 const CatB = () => {
   return (
     <div className="md:px-8">
       <div className="flex flex-col gap-4 ">
         <select>
-          <option>Category 1</option>
+          <option>Category </option>
           <option>Category 1</option>
           <option>Category 1</option>
         </select>
@@ -37,7 +38,9 @@ const CatB = () => {
           </div>
         );
       })}
+   
     </div>
+   
   );
 };
 

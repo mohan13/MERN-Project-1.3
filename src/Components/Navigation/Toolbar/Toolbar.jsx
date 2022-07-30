@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   AiOutlineUser,
   AiOutlineShoppingCart,
@@ -9,7 +9,12 @@ import { NavData } from "../NavData";
 import Icon from "../../Ui/icon";
 import Logo from "../../Images/mainLogo.webp";
 import { Link } from "react-router-dom";
+import Sidebar from "../Sidebar/sidebar";
 const Toolbar = () => {
+  const [switchToggled, setSwitchToggled] = useState(true);
+  // const ToggleSwitch = () => {
+  //   setSwitchToggled ? setSwitchToggled(false) : setSwitchToggled(true);
+  // };
   return (
     <div className="w-full grid">
       <div className="py-4 flex justify-between px-6 md:px-14 lg:grid grid-cols-4 w-full items-center">
@@ -20,7 +25,10 @@ const Toolbar = () => {
           {NavData?.map((val, i) => {
             return (
               <div key={i}>
-                <Link to={val.path} className="hidden lg:flex items-center hover:text-red-500">
+                <Link
+                  to={val.path}
+                  className="hidden lg:flex items-center hover:text-red-500"
+                >
                   {val.title}
                   {val.icon}
                 </Link>
@@ -28,17 +36,32 @@ const Toolbar = () => {
             );
           })}
         </div>
-       
         <div className="md:flex hidden justify-evenly">
           <Icon
-            Icon1={<AiOutlineSearch className="w-full h-full hover:cursor-pointer color-red " />}
+            Icon1={
+              <AiOutlineSearch className="w-full h-full hover:cursor-pointer color-red " />
+            }
           />
-          <Icon Icon1={<AiOutlineUser className="  hover:cursor-pointer  w-full h-full" />} />
-          <Icon Icon1={<AiOutlineShoppingCart className="  hover:cursor-pointer  w-full h-full" />} />
+          <Icon
+            Icon1={
+              <AiOutlineUser className="  hover:cursor-pointer  w-full h-full" />
+            }
+          />
+          <Icon
+            Icon1={
+              <AiOutlineShoppingCart className="  hover:cursor-pointer  w-full h-full" />
+            }
+          />
         </div>
-        <div className="lg:hidden">
-          <AiOutlineMenu className="w-8 h-8 bg-yello-200" />
+        <div className="lg:hidden ">
+          <AiOutlineMenu
+            className="w-8 h-8 bg-yello-200"
+            onClick={() => setSwitchToggled(!switchToggled)}
+          />
         </div>
+      </div>
+      <div className={switchToggled ? "hidden" : "flex"}>
+        <Sidebar/>
       </div>
       <div className="bg-black text-md text-white py-3">
         Sale Up To 50% Biggest Discounts. Hurry! Limited Perriod Offer Shop Now
