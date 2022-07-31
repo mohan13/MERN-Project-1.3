@@ -39,14 +39,14 @@ const Trend = () => {
           </div>
         </div>
       </div>
-      <div className=" grid grid-cols-1 mt-8 md:flex md:gap-10 items-center">
-        <button onClick={(i) => prevImage(i - 1)}>
+      <div className=" grid grid-cols-2 gap-2 mt-8 md:flex md:gap-10 items-center">
+        {/* <button onClick={(i) => prevImage(i - 1)}>
           <FaChevronLeft color="gray" className="w-8 h-8" />
-        </button>
+        </button> */}
         {TrendData?.map((val, i) => {
           if (i <= Index) {
             return (
-              <div key={i}>
+              <div key={i} grid grid-cols-2>
                 <Link to="/shop">
                   <div className="leading-8 ">
                     <div>
@@ -64,9 +64,9 @@ const Trend = () => {
             setIndex(i);
           }
         })}
-        <button onClick={(i) => nextImage(TrendData.length + 1)}>
+        {/* <button onClick={(i) => nextImage(TrendData.length + 1)}>
           <FaChevronRight color="gray" className="w-8 h-8" />
-        </button>
+        </button> */}
       </div>
     </div>
   );

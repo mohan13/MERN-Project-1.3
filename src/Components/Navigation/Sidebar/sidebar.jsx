@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 const Toolbar = () => {
 
   return (
-    <div className="flex justify-between w-full">
+    <div className="flex justify-between w-full px-2">
       {NavData?.map((val, i) => {
         return (
-          <div key={i} className='font-semibold py-4 hover:text-red-500 flex items-center text-base  '>
+          <div key={i} className='font-semibold py-4 hover:text-red-500 flex  items-center text-base  '>
             <Link to={val.path} className='flex items-center' >
               {val.title}
               {val.icon}

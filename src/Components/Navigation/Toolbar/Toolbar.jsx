@@ -17,7 +17,7 @@ const Toolbar = () => {
   // };
   return (
     <div className="w-full grid">
-      <div className="py-4 flex justify-between px-6 md:px-14 lg:grid grid-cols-4 w-full items-center">
+      <div className="py-4 flex justify-between px-4 md:px-14 lg:grid grid-cols-4 w-full items-center">
         <div className="w-32 md:w-40  hover:cursor-pointer  ">
           <img src={Logo} alt="" className="w-full" />
         </div>
@@ -63,7 +63,7 @@ const Toolbar = () => {
       <div className={switchToggled ? "hidden" : "flex"}>
         <Sidebar/>
       </div>
-      <div className="bg-black text-md text-white py-3">
+      <div className="bg-black md:text-md text-white py-3">
         Sale Up To 50% Biggest Discounts. Hurry! Limited Perriod Offer Shop Now
       </div>
     </div>
