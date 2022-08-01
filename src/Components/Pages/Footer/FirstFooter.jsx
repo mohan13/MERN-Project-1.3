@@ -4,7 +4,7 @@ export const FooterData =[{
     subHeading:"Subscribe newsletter to get 5% on all products.",
     type:"email",
     placeholder:"Enter your email",
-    fb:<FaFacebook color="white"/>,
+    fb:<FaFacebook color="white class"/>,
     insta:<FaInstagram color="white"/>,
     yt:<FaYoutube color="white"/>
 }]

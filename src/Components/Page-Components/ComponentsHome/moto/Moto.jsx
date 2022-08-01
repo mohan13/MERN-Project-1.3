@@ -2,10 +2,10 @@ import React from "react";
 import { motoData } from "./motoData";
 import { Link } from "react-router-dom";
 const Moto = () => {
-  const handleMouseEnter = () => {
-    // e.target.style.bottom = 28
-    console.log("");
-  };
+  // const handleMouseEnter = () => {
+  //   // e.target.style.bottom = 28
+  //   console.log("");
+  // };
   return (
     <div className="md:w-full grid grid-cols-1   items-end md:grid-cols-3 p-2 my-4 md:px-10 md:py-4 gap-7 ">
       {motoData?.map((val) => {
