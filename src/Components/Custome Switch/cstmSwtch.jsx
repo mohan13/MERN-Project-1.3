@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { AnimatePresence } from "framer-motion";
 import { Routes, useLocation } from "react-router-dom";
 import TopBarProgress from "react-topbar-progress-indicator";
 const CstmSwtch = ({ children }) => {
@@ -25,7 +26,9 @@ const CstmSwtch = ({ children }) => {
   return (
     <div>
       {progress && <TopBarProgress />}
-      <Routes>{children}</Routes>
+      <AnimatePresence>
+        <Routes>{children}</Routes>
+      </AnimatePresence>
     </div>
   );
 };

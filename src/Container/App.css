@@ -5,7 +5,8 @@
 }
 select{
   outline: none;
-  padding:5px;
+  padding:10px;
+  margin-top:15px;
   border:solid 1px;
   border-radius: 20px;
 
