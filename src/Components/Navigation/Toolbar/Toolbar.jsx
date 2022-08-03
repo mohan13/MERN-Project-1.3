@@ -42,11 +42,13 @@ const Toolbar = () => {
               <AiOutlineSearch className="w-full h-full hover:cursor-pointer color-red " />
             }
           />
+          <Link to='/form1'>
           <Icon
             Icon1={
               <AiOutlineUser className="hover:cursor-pointer  w-full h-full" />
             }
           />
+          </Link>
           <Icon
             Icon1={
               <AiOutlineShoppingCart className="hover:cursor-pointer  w-full h-full" />

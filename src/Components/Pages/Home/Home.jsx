@@ -10,9 +10,10 @@ const Home = () => {
   return (
     <div>
       <motion.div
-        initial={{ height: 0 }}
-        animate={{ height: "100%" }}
-        exit={{ x: window.innerHeight, transition: { duration: 0.2 } }}>
+        initial={{ opacity: 0 }}
+        animate={{ opacity:1}}
+        transition={{delay:0.3, duration:0.5}}
+       >
         <Banner />
 
         <Moto />

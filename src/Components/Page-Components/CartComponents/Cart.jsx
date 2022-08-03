@@ -13,7 +13,7 @@ const Cart = () => {
       <motion.div
         initial={{ height: 0 }}
         animate={{ height: "100%" }}
-        exit={{ x: window.innerHeight, transition: { duration: 0.2 } }}
+        exit={{ y: window.innerHeight, transition: { duration:0.1 } }}
       >
         <div className="bg-red-500 md:pl-10 md:py-8">
           {CartData?.map((val, i) => {

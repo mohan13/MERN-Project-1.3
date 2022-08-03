@@ -12,8 +12,4 @@ export const LoginData =[
         name:"password"
     },
  
-    {
-        type:'radio',
-        text:"Keep me Logged In"
-    }
 ]

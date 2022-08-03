@@ -33,6 +33,7 @@ const CustomerFeedback = () => {
                 initial={{ x: 200, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 exit={{ x: -200, opacity: 0 }}
+                transition={{duration:0.5}}
               >
                 <div className=" flex flex-col  duration-300  font-sans items-center">
                   <h1 className="text-4xl my-10">{val.Heading}</h1>
