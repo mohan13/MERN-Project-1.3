@@ -28,8 +28,6 @@ const CustomerFeedback = () => {
                 <FaChevronLeft />
               </button>
               <motion.div
-                // key={image.src}
-                // src={image.src}
                 initial={{ x: 200, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 exit={{ x: -200, opacity: 0 }}

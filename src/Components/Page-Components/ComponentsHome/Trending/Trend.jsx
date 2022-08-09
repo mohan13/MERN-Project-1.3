@@ -1,53 +1,73 @@
 import React, { useState } from "react";
-// import latestImg from '../../../Images/latest.webp'
 import { TrendData } from "../Trending/TrendData";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
 const Trend = () => {
-  const [Index, setIndex] = useState(2);
-  const nextImage = (i) => {
-    if (i === TrendData.length) {
+  const [Item, setItem] = useState(TrendData);
+  const FilterItem = (cateItem) => {
+    const updateItem = TrendData.filter((curItem) => {
+      return curItem.category === cateItem;
+    });
+    setItem(updateItem);
+  };
+  const [Index, setIndex] = useState(1);
+  const nextImage = () => {
+    // alert('working')
+    if (Index === TrendData.length) {
       setIndex(0);
     } else {
-      setIndex(i);
+      setIndex(Index + 1);
     }
   };
-  const prevImage = (i) => {
-    if (i <= 0) {
+  const prevImage = () => {
+    if (Index <= 0) {
       setIndex(TrendData.length - 1);
     } else {
-      setIndex(i);
+      setIndex(Index - 1);
     }
   };
   return (
     <div className="md:mx-14 my-8 ">
       <div className="grid grid-cols-1 gap-2 py-4 md:py-0 border-b-2 md:flex justify-between items-center ">
         <h1 className="text-xl md:text-3xl">Trending This Week</h1>
-        <div className="grid grid-cols-4  transitin gap-4 md:h-14 text-sm  md:text-lg">
+        <div className="grid grid-cols-4  transition gap-4 md:h-14 text-sm  md:text-lg">
           <div className="hover:border-b-4  border-red-500">
-            <button className="">Men</button>
-            
+            <button onClick={() => FilterItem("men")} className="">
+              Men
+            </button>
           </div>
           <div className="hover:border-b-4 border-red-500">
-            <button className="">Women</button>
+            <button onClick={() => FilterItem("women")} className="">
+              Women
+            </button>
           </div>
           <div className="hover:border-b-4 border-red-500">
-            <button className="">Baby</button>
+            <button className="" onClick={() => FilterItem("baby")}>
+              Baby
+            </button>
           </div>
           <div className="hover:border-b-4 border-red-500">
-            <button >Fashion</button>
+            <button onClick={() => FilterItem("fashion")}>Fashion</button>
           </div>
         </div>
       </div>
-      <div className=" grid grid-cols-2 gap-2 mt-8 md:flex md:gap-10 items-center">
-        {/* <button onClick={(i) => prevImage(i - 1)}>
+      <div className="  gap-2 mt-8 flex md:gap-10 items-center">
+        <button onClick={() => prevImage()}>
           <FaChevronLeft color="gray" className="w-8 h-8" />
-        </button> */}
-        {TrendData?.map((val, i) => {
+        </button>
+        {Item?.map((val, i) => {
+          console.log(i, Index);
           if (i <= Index) {
             return (
-              <div key={i} grid grid-cols-2>
-                <Link to="/shop">
+              <div key={i} className="">
+                <Link
+                  to={{
+                    pathname: "/shop",
+                    state: {
+                      data: val.key,
+                    },
+                  }}
+                >
                   <div className="leading-8 ">
                     <div>
                       <img src={val.Image} alt="" />
@@ -60,13 +80,11 @@ const Trend = () => {
                 </Link>
               </div>
             );
-          } else {
-            setIndex(i);
           }
         })}
-        {/* <button onClick={(i) => nextImage(TrendData.length + 1)}>
+        <button onClick={() => nextImage()}>
           <FaChevronRight color="gray" className="w-8 h-8" />
-        </button> */}
+        </button>
       </div>
     </div>
   );

@@ -30,7 +30,7 @@ const Login = () => {
           <Link to='#' className="text-red-500">forgot your password ?</Link>
         </div>
         <div className="grid gap-4 md:flex justify-between">
-          <h2 className="flex">Don’t have an account? <Link to='#' className="md:mx-2 text-red-500">Sign Up </Link>here</h2>
+        <h2 className="flex">Don’t have an account? <Link to='#' className="md:mx-2 text-red-500">Sign Up </Link>here</h2>
           <button className="py-4 px-8 bg-red-500" type="submti">
             Login
           </button>

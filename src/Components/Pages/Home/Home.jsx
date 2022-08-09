@@ -15,7 +15,6 @@ const Home = () => {
         transition={{delay:0.3, duration:0.5}}
        >
         <Banner />
-
         <Moto />
         <Trend />
         <CustomerFeedback />

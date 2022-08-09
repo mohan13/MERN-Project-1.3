@@ -33,10 +33,10 @@ const ShopMen = () => {
                   </div>
                 </Link>
                 <div
-                  className={`  absolute z-100 md:inset-x-10 lg:inset-x-8 inset-x-14 bottom-24
+                  className={`absolute z-100 md:inset-x-10 lg:inset-x-8 inset-x-14 bottom-24
                     ${switchToggled === i ? " " : "hidden"}`}
                 >
-                  <div className="flex text-red-400   ">
+                  <div className="flex text-red-400">
                     <AiOutlineShoppingCart className="bg-white hover:bg-red-500 p-4 hover:text-white w-14 h-14" />
                     <AiOutlineLike className=" bg-white hover:bg-red-500 p-4 hover:text-white w-14 h-14" />
                     <AiOutlineZoomIn className=" bg-white hover:bg-red-500 p-4 hover:text-white w-14 h-14" />
