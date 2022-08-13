@@ -10,18 +10,20 @@ const Trend = () => {
     });
     setItem(updateItem);
   };
-  const [Index, setIndex] = useState(1);
+  const [Index, setIndex] = useState(0);
   const nextImage = () => {
-    // alert('working')
-    if (Index === TrendData.length) {
+    if (Index <= TrendData.length) {
+      setIndex(Index.slice(1));
+    
+    }
+    else {
       setIndex(0);
-    } else {
-      setIndex(Index + 1);
+      
     }
   };
   const prevImage = () => {
     if (Index <= 0) {
-      setIndex(TrendData.length - 1);
+      setIndex(TrendData.length - 1 );
     } else {
       setIndex(Index - 1);
     }
@@ -63,10 +65,9 @@ const Trend = () => {
                 <Link
                   to={{
                     pathname: "/shop",
-                    state: {
-                      data: val.key,
-                    },
+                    search: `?id=${i}`,
                   }}
+                  state={{ data: [val] }}
                 >
                   <div className="leading-8 ">
                     <div>

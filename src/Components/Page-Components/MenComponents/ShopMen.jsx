@@ -26,7 +26,12 @@ const ShopMen = () => {
                 className="relative"
               >
                 <img src={val.Image} alt=""/>
-                <Link to="/shop">
+                <Link  to={{
+                    pathname: "/shop",
+                    search:`?id=${i}`
+                  }}
+                
+                  state={{data:[val]}}>
                   <div>
                     <h1 className="hover:text-red-500">{val.product}</h1>
                     <p>{val.price}</p>
