@@ -1,16 +1,16 @@
 import React from "react";
-import Login from "../Page-Components/loginFormComponents/Login";
 import { motion } from "framer-motion";
-function loginForm() {
+import SignUpForm from "../../Page-Components/loginFormComponents/SignUP";
+const SignUp = () => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 0.3, duration: 0.5 }}
     >
-      <Login />
+      <SignUpForm/>
     </motion.div>
   );
-}
+};
 
-export default loginForm;
+export default SignUp;

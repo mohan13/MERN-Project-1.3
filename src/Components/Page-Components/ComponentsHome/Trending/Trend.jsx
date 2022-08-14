@@ -64,10 +64,10 @@ const Trend = () => {
               <div key={i} className="">
                 <Link
                   to={{
-                    pathname: "/shop",
+                    pathname:"/shop",
                     search: `?id=${i}`,
                   }}
-                  state={{ data: [val] }}
+                  state={{data:[val] }}
                 >
                   <div className="leading-8 ">
                     <div>

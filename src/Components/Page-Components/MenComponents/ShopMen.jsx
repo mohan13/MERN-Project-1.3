@@ -27,7 +27,7 @@ const ShopMen = () => {
               >
                 <img src={val.Image} alt=""/>
                 <Link  to={{
-                    pathname: "/shop",
+                    pathname:"/shop",
                     search:`?id=${i}`
                   }}
                 

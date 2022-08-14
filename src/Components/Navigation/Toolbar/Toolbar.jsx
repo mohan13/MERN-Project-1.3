@@ -12,6 +12,8 @@ import { Link } from "react-router-dom";
 import Sidebar from "../Sidebar/sidebar";
 const Toolbar = () => {
   const [switchToggled, setSwitchToggled] = useState(true);
+  const [search, setSearch] = useState(true);
+
   // const ToggleSwitch = () => {
   //   setSwitchToggled ? setSwitchToggled(false) : setSwitchToggled(true);
   // };
@@ -39,7 +41,8 @@ const Toolbar = () => {
         <div className="md:flex hidden justify-evenly">
           <Icon
             Icon1={
-              <AiOutlineSearch className="w-full h-full hover:cursor-pointer color-red " />
+            
+            <AiOutlineSearch onClick={() => setSearch(!search)}  className="w-full h-full hover:cursor-pointer color-red " />
             }
           />
           <Link to='/form1'>
@@ -64,6 +67,9 @@ const Toolbar = () => {
       </div>
       <div className={switchToggled ? "hidden" : "flex"}>
         <Sidebar/>
+      </div>
+      <div className={search? "hidden" : "flex"}>
+        <input type="text" className="border outline-none w-full m-4 p-4 text-lg"/>
       </div>
       <div className="bg-black md:text-md text-white py-3">
         Sale Up To 50% Biggest Discounts. Hurry! Limited Perriod Offer Shop Now

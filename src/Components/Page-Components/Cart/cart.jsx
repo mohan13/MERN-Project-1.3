@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React,{useState} from "react";
 import { FiShare2, FiStar } from "react-icons/fi";
 import { motion } from "framer-motion";
 import { useLocation } from "react-router-dom";
@@ -17,7 +17,7 @@ const Cart = () => {
         animate={{ height: "100%" }}
         exit={{ y: window.innerHeight, transition: { duration: 0.1 } }}
       >
-        <div className="">
+        <div>
           {CartData?.map((val, i) => {
             return (
               <div key={i}>
@@ -92,7 +92,6 @@ const Cart = () => {
             );
           })}
         </div>
-        <div></div>
       </motion.div>
     </div>
   );
