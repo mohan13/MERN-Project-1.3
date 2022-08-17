@@ -27,22 +27,27 @@ const CustomerFeedback = () => {
               <button onClick={() => prevImage(i - 1)}>
                 <FaChevronLeft />
               </button>
-              <motion.div
-                initial={{ x: 200, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                exit={{ x: -200, opacity: 0 }}
-                transition={{duration:0.5}}
-              >
-                <div className=" flex flex-col  duration-300  font-sans items-center">
+              <motion.div>
+                <div className="  duration-300  font-sans items-center">
                   <h1 className="text-4xl my-10">{val.Heading}</h1>
-                  <p className="text-sm md:text-lg leading-loose">{val.para}</p>
-                  <div className="flex gap-6 font-sans items-center my-4 ">
-                    <img src={val.profile} alt="" />
-                    <div className="text-left leading-loose">
-                      <div className="text-sm">{val.pflName}</div>
-                      <div className="text-stone-400 text-md">{val.post}</div>
+                  <motion.div
+                    initial={{ x: 200, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    exit={{ x: -200, opacity: 0 }}
+                    transition={{ duration: 0.5 }}
+                    className="flex flex-col items-center"
+                  >
+                    <p className="text-sm md:text-lg leading-loose">
+                      {val.para}
+                    </p>
+                    <div className="flex gap-6 font-sans items-center my-4 ">
+                      <img src={val.profile} alt="" />
+                      <div className="text-left leading-loose">
+                        <div className="text-sm">{val.pflName}</div>
+                        <div className="text-stone-400 text-md">{val.post}</div>
+                      </div>
                     </div>
-                  </div>
+                  </motion.div>
                 </div>
               </motion.div>
               <button onClick={() => nextImage(i + 1)}>

@@ -1,69 +1,37 @@
 export const CatData =[
-    // {
-    //     label:"payment method",
-    //     type:"Range",
-    //     title:"0 to 5000"
-
-    // },
   
     {
-        label:"payment method",
-        type:"radio",
-        title:"Cash on delivery"
+        label:"Payment method",
+        title:"Cash on delivery",
+        name:"cod"
 
     },
     {
-        type:"radio",
-        title:"Free shiping"
+        title:"Free shiping",
+        name:"shiping"
+
 
     },
     {
-        type:"radio",
-        title:"Cpital's Mall"
+        title:"Capital's Mall",
+        name:"cod"
 
     },
     {
         label:"Filter by Brand",
-        type:"radio",
-        title:"Addias"
+        title:"Addias",
+        name:"addias"
+
 
     },
     {
-        type:"radio",
-        title:"Levi's"
+        title:"Levi's",
+        name:"levi"
+
 
     },
     {
-        type:"radio",
-        title:"Shangrila"
-
-    },
-    {
-        type:"radio",
-        title:"Nike"
-
-    },
-    {
-        type:"radio",
-        title:"Pumba"
-
+        title:"Nike",
+        namer:"nike"
     },
 ]
-// export const options = [
-//     {
-//       label: "Apple",
-//       value: "apple",
-//     },
-//     {
-//       label: "Mango",
-//       value: "mango",
-//     },
-//     {
-//       label: "Banana",
-//       value: "banana",
-//     },
-//     {
-//       label: "Pineapple",
-//       value: "pineapple",
-//     },
-//   ];

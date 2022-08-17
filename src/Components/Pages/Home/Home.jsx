@@ -8,21 +8,19 @@ import Trend from "../../Page-Components/ComponentsHome/Trending/Trend";
 import CustomerFeedback from "../../Page-Components/ComponentsHome/CustomerFeedback/CustomerFeedback";
 const Home = () => {
   return (
-    <div>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity:1}}
-        transition={{delay:0.3, duration:0.5}}
-       >
-        <Banner />
-        <Moto />
-        <Trend />
-        <CustomerFeedback />
-        <Trend />
-        <Latest />
-        <Service />
-      </motion.div>
-    </div>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.3, duration: 0.5 }}
+    >
+      <Banner />
+      <Moto/>
+      <Trend />
+      <CustomerFeedback />
+      {/* <Trend /> */}
+      <Latest />
+      <Service />
+    </motion.div>
   );
 };
 

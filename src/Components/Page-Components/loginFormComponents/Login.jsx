@@ -36,7 +36,7 @@ const Login = () => {
                     <div key={i} className="grid gap-10 text-left   ">
                       <label className=" text font-lg mt-4">{val.label}</label>
                       <Field
-                        className="py-4 pl-4   border outline-none text-sm"
+                        className="py-4 pl-4 text-red-400   border outline-none text-sm"
                         type={val.type}
                         placeholder={val.placeholder}
                         name={val.name}

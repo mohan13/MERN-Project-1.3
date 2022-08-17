@@ -1,10 +1,11 @@
 import "./App.css";
 import Layout from "../HOC/Layout/Layout";
-import Home from "../Components/Pages/Home/Home";
+import Home from '../Components/Pages/Home/Home'
 import Men from "../Components/Pages/Men";
 import LoginForm1 from "../Components/Pages/loginForm";
 import SignUpForm from "../Components/Pages/SignUp/SignUp";
 import Cart from '../Components/Page-Components/Cart/cart'
+import Contact from '../Components/Page-Components/Contact-Components/sendContact'
 import { BrowserRouter as Router, Route} from "react-router-dom";
 import CstmSwtch from "../Components/Custome Switch/cstmSwtch";
 function App() {
@@ -19,6 +20,8 @@ function App() {
             <Route path="/shop" element={<Cart/>}/>
             <Route path="/form1" element={<LoginForm1/>} />
             <Route path="/form2" element={<SignUpForm/>} />
+            <Route path="/form2" element={<SignUpForm/>} />
+            <Route path="/contact" element={<Contact/>} />
 
           </CstmSwtch>
         </Layout>

@@ -11,40 +11,12 @@ export const NavData =[{
     title:'Women',
     path:"/women"
 },
-{
-    title:'Pages',
-    path:"/pages",
-    icon:<AiOutlineDown/>
-},
+// {
+//     title:'Pages',
+//     path:"/pages",
+//     icon:<AiOutlineDown/>
+// },
 {
     title:'Contact',
     path:"/contact"
 }]
-// export const topHeaderLeft=[{
-//     titleL:"About Us"
-// },
-// {
-//     titleL:"Privacy"
-// },
-// {
-//     titleL:"FAQ"
-// },
-// {
-//     titleL:"Careers"
-// }]
-// export const topHeaderRight =[
-// {
-//     titleR:"My Wishlist"
-// },
-// {
-//     titleR:"Track Your Order"
-// },
-// {
-//     titleR:"fb"
-// },
-// {
-//     titleR:"Instagram"
-// }
-// ,{
-//     titleR:"LinkedIn"
-// }]

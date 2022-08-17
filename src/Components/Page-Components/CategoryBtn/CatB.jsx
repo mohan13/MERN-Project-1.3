@@ -1,7 +1,10 @@
 import React from "react";
 import { CatData } from "./CategoryData";
-// import { selectData,childs } from "../CategoryBtn/CategoryData";
-// import {oprtions} from '../CategoryData'
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import * as yup from "yup";
+export const schema = yup.object().shape({
+  cod: yup.boolean(),
+});
 const CatB = () => {
   const options = [
     {
@@ -9,7 +12,6 @@ const CatB = () => {
       cat2: "Category 1",
       cat3: "Category 2",
       cat4: "Category 3",
-
     },
     {
       cat1: "Type",
@@ -22,7 +24,6 @@ const CatB = () => {
       cat2: "L",
       cat3: "M",
       cat4: "S",
-
     },
     {
       cat1: "Color",
@@ -33,37 +34,43 @@ const CatB = () => {
   ];
   return (
     <div className="px-6 md:px-0 py-4">
-      {options.map((val,i) => {
+      {options.map((val, i) => {
         return (
-          <div key={i} className='grid grid-cols-1'>
+          <div key={i} className="grid grid-cols-1">
             <select>
-              <option>
-                {val.cat1}
-              </option>
-              <option>
-                {val.cat2}
-              </option>
-              <option>
-                {val.cat3}
-              </option>
-              <option>
-                {val.cat4}
-              </option>
-          </select>
+              <option>{val.cat1}</option>
+              <option>{val.cat2}</option>
+              <option>{val.cat3}</option>
+              <option>{val.cat4}</option>
+            </select>
           </div>
         );
       })}
-      {CatData?.map((val, i) => {
-        return (
-          <div key={i} className="md:text-left">
-            <div className="my-4 text-lg font-bold">{val.label}</div>
-            <div className="flex gap-4 items-center">
-              <input type={val.type} placeholder={val.placeholder} />
-              {val.title}
-            </div>
-          </div>
-        );
-      })}
+      <Formik
+        initialValues={{
+
+        }}
+        validationSchema={schema}
+        render={({ errors, touched, handleSubmit }) => {
+          return (
+            <Form>
+              {CatData?.map((val, i) => {
+                return (
+                  <div key={i} className="md:text-left">
+                    <div className="my-4 text-lg font-bold">{val.label}</div>
+                    <div className="flex gap-4 items-center">
+                      <Field type="checkbox" placeholder={val.placeholder} />
+                      {val.title}
+                      {/* <ErrorMessage  name={val.name} component={"div"} /> */}
+                    </div>
+                    
+                  </div>
+                );
+              })}
+            </Form>
+          );
+        }}
+      />
     </div>
   );
 };

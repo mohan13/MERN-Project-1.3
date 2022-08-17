@@ -5,10 +5,15 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as yup from "yup";
 export const schema = yup.object().shape({
   fullname: yup.string().required("Full name is required"),
-  email: yup.string().email("Invalid email address format").required("Email is required"),
-  password: yup
-    .string().min(8).max(32)
-    .required("password is required"),
+  email: yup
+    .string()
+    .email("Invalid email address format")
+    .required("Email is required"),
+  password: yup.string().min(8).max(32).required("password is required"),
+  ConfirmPassword: yup
+    .string()
+    .required("Password is required")
+    .oneOf([yup.ref("password"), null], "Password doesn't match"),
 });
 const Login = () => {
   return (
@@ -40,7 +45,11 @@ const Login = () => {
                         placeholder={val.placeholder}
                         name={val.name}
                       />
-                      <ErrorMessage className="text-red-500" name={val.name} component={"div"} />
+                      <ErrorMessage
+                        className="text-red-500"
+                        name={val.name}
+                        component={"div"}
+                      />
                     </div>
                   );
                 })}
@@ -57,7 +66,7 @@ const Login = () => {
                   <h2 className="flex">
                     Don’t have an account?{" "}
                     <Link to="/form1" className="md:mx-2 text-red-500">
-                     Login
+                      Login
                     </Link>
                     here
                   </h2>

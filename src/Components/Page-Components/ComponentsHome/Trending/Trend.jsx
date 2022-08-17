@@ -10,24 +10,25 @@ const Trend = () => {
     });
     setItem(updateItem);
   };
-  const [Index, setIndex] = useState(0);
+  const [Start, setStart] = useState(0);
+  const [End, setEnd] = useState(3);
   const nextImage = () => {
-    if (Index <= TrendData.length) {
-      setIndex(Index.slice(1));
-    
-    }
-    else {
-      setIndex(0);
-      
-    }
-  };
-  const prevImage = () => {
-    if (Index <= 0) {
-      setIndex(TrendData.length - 1 );
+    if (End === TrendData.length) {
+      setEnd(End);
     } else {
-      setIndex(Index - 1);
+      setEnd(End + 1);
+      setStart(End - 2);
     }
   };
+  // const prevImage = () => {
+  //   if (End <= 3) {
+  //     setEnd(TrendData.length - 1);
+  //   } else {
+  //     setEnd(End-1)
+  //     setEnd(Start+1)
+  //   }
+  // };
+
   return (
     <div className="md:mx-14 my-8 ">
       <div className="grid grid-cols-1 gap-2 py-4 md:py-0 border-b-2 md:flex justify-between items-center ">
@@ -54,20 +55,21 @@ const Trend = () => {
         </div>
       </div>
       <div className="  gap-2 mt-8 flex md:gap-10 items-center">
-        <button onClick={() => prevImage()}>
+        <button 
+        // onClick={() => prevImage()}
+        >
           <FaChevronLeft color="gray" className="w-8 h-8" />
         </button>
         {Item?.map((val, i) => {
-          console.log(i, Index);
-          if (i <= Index) {
+          if (i >= Start && i < End) {
             return (
               <div key={i} className="">
                 <Link
                   to={{
-                    pathname:"/shop",
+                    pathname: "/shop",
                     search: `?id=${i}`,
                   }}
-                  state={{data:[val] }}
+                  state={{ data: [val] }}
                 >
                   <div className="leading-8 ">
                     <div>
