@@ -38,7 +38,7 @@ const Toolbar = () => {
             );
           })}
         </div>
-        <div className="md:flex hidden justify-evenly">
+        <div className="md:flex flex justify-evenly">
           <Icon
             Icon1={
             
@@ -60,7 +60,7 @@ const Toolbar = () => {
         </div>
         <div className="md:hidden ">
           <AiOutlineMenu
-            className="w-8 h-8 bg-yello-200"
+            className="w-6 h-6   md:w-8 md:h-8 bg-yello-200"
             onClick={() => setSwitchToggled(!switchToggled)}
           />
         </div>

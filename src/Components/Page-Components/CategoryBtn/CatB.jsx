@@ -3,7 +3,7 @@ import { CatData } from "./CategoryData";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as yup from "yup";
 export const schema = yup.object().shape({
-  cod: yup.boolean(),
+  cod: yup.string().required("working"),
 });
 const CatB = () => {
   const options = [
@@ -48,25 +48,31 @@ const CatB = () => {
       })}
       <Formik
         initialValues={{
-
+          cod: "",
         }}
-        validationSchema={schema}
+        validationSchema={{ schema }}
         render={({ errors, touched, handleSubmit }) => {
           return (
-            <Form>
+            <Form onSubmit={handleSubmit}>
               {CatData?.map((val, i) => {
                 return (
                   <div key={i} className="md:text-left">
                     <div className="my-4 text-lg font-bold">{val.label}</div>
                     <div className="flex gap-4 items-center">
-                      <Field type="checkbox" placeholder={val.placeholder} />
+                     {/* <div className="w-4 h-4 rounded-full bg-red-300"> */}
+                     <Field
+                        type="checkbox"
+                        name={val.name}
+                        placeholder={val.placeholder}
+                      />
+                     {/* </div> */}
                       {val.title}
-                      {/* <ErrorMessage  name={val.name} component={"div"} /> */}
+                      <ErrorMessage name={val.name} component={"div"} />
                     </div>
-                    
                   </div>
                 );
               })}
+              <button type="Submit">Submit</button>
             </Form>
           );
         }}

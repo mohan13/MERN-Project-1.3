@@ -20,14 +20,16 @@ const Trend = () => {
       setStart(End - 2);
     }
   };
-  // const prevImage = () => {
-  //   if (End <= 3) {
-  //     setEnd(TrendData.length - 1);
-  //   } else {
-  //     setEnd(End-1)
-  //     setEnd(Start+1)
-  //   }
-  // };
+  const prevImage = () => {
+    if (Start === 0) {
+      setStart(0);
+      setEnd(3);
+    } else {
+      let Value = 1;
+      setStart(Start - Value);
+      setEnd(End - Value);
+    }
+  };
 
   return (
     <div className="md:mx-14 my-8 ">
@@ -54,10 +56,8 @@ const Trend = () => {
           </div>
         </div>
       </div>
-      <div className="  gap-2 mt-8 flex md:gap-10 items-center">
-        <button 
-        // onClick={() => prevImage()}
-        >
+      <div className=" justify-center gap-2 mt-8 flex md:gap-10 items-center">
+        <button onClick={() => prevImage()}>
           <FaChevronLeft color="gray" className="w-8 h-8" />
         </button>
         {Item?.map((val, i) => {

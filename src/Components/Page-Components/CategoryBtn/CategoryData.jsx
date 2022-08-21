@@ -14,7 +14,7 @@ export const CatData =[
     },
     {
         title:"Capital's Mall",
-        name:"cod"
+        name:"mall"
 
     },
     {
@@ -32,6 +32,6 @@ export const CatData =[
     },
     {
         title:"Nike",
-        namer:"nike"
+        name:"nike"
     },
 ]

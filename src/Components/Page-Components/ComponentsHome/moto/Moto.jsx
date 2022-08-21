@@ -19,11 +19,9 @@ const Moto = () => {
           >
             <div className="font-sans absolute  duration-300 -bottom-4 hover:bottom-4 inset-x-14 text-white font-bolder">
               <div className="text-3xl mb-4">{val.heading}</div>
-             /
-              <h1
-                className="text-sm text-bolder decoration-2 underline underline-offset-4 text-stone-500"
-              >{val.btn}</h1> 
-              {/* </Link> */}
+              <Link to={val.path} className="text-sm text-bolder decoration-2 underline underline-offset-4 text-stone-500">
+                <button>Shop Now</button>
+              </Link>
             </div>
           </div>
         );

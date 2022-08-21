@@ -8,8 +8,9 @@ import {
   AiOutlineZoomIn,
 } from "react-icons/ai";
 const ShopMen = () => {
+  // const [Click,setClick] =useState(false)
   const [switchToggled, setSwitchToggled] = useState(-1);
-
+ 
   return (
     <div className="grid grid-cols-1 md:grid-cols-4 mt-10 md:gap-10 mx-4 md:mx-14">
       <div className="border p-2">
@@ -21,7 +22,8 @@ const ShopMen = () => {
             return (
               <div
                 key={i}
-                onMouseEnter={() => setSwitchToggled(i)}
+                // onClick={InOut(i)}
+                onMouseOver={() => setSwitchToggled(i)}
                 onMouseLeave={() => setSwitchToggled(-1)}
                 className="relative"
               >
