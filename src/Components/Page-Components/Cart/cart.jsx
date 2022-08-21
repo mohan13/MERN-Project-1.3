@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import { FiShare2, FiStar } from "react-icons/fi";
 import { motion } from "framer-motion";
 import { useLocation } from "react-router-dom";
@@ -57,7 +57,7 @@ const Cart = () => {
                     </div>
                   </div>
                 </div>
-                <div className="flex  mt-4 px-2  md:gap-6 justify-between text-md md:text-xl  border-b-2 ">
+                <div className="flex mt-4 px-2 md:gap-6 justify-between text-lg md:text-xl  border-b-2 ">
                   <button
                     onClick={() => FilterItem(0)}
                     className="hover:border-b-4 md:p-4 pb-6 hover:text-red-500 hover:border-red-500 "
@@ -77,7 +77,7 @@ const Cart = () => {
                     Review
                   </button>
                 </div>
-                <div className="text-left my-4 p-10">
+                <div className="text-left text-md leading-6 md:text-xl my-4 p-8 md:p-10">
                   <motion.div className={show === 0 ? "" : "hidden"}>
                     {val.comment}
                   </motion.div>

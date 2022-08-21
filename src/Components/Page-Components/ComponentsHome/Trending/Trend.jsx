@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import { TrendData } from "../Trending/TrendData";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -33,27 +34,24 @@ const Trend = () => {
 
   return (
     <div className="md:mx-14 my-8 ">
-      <div className="grid grid-cols-1 gap-2 py-4 md:py-0 border-b-2 md:flex justify-between items-center ">
-        <h1 className="text-xl md:text-3xl">Trending This Week</h1>
-        <div className="grid grid-cols-4  transition gap-4 md:h-14 text-sm  md:text-lg">
-          <div className="hover:border-b-4  border-red-500">
-            <button onClick={() => FilterItem("men")} className="">
-              Men
-            </button>
-          </div>
-          <div className="hover:border-b-4 border-red-500">
-            <button onClick={() => FilterItem("women")} className="">
-              Women
-            </button>
-          </div>
-          <div className="hover:border-b-4 border-red-500">
-            <button className="" onClick={() => FilterItem("baby")}>
-              Baby
-            </button>
-          </div>
-          <div className="hover:border-b-4 border-red-500">
-            <button onClick={() => FilterItem("fashion")}>Fashion</button>
-          </div>
+      <h1 className="text-xl md:text-3xl">Trending This Week</h1>
+
+      <div className="flex  mt-4 px-2  md:gap-6 justify-between text-md md:text-xl  border-b-2">
+        <div className="hover:border-b-4 pb-4 hover:border-red-500">
+          <button onClick={() => FilterItem("men")}>Men</button>
+        </div>
+        <div className="hover:border-b-4 border-red-500">
+          <button onClick={() => FilterItem("women")} className="">
+            Women
+          </button>
+        </div>
+        <div className="hover:border-b-4 border-red-500">
+          <button className="" onClick={() => FilterItem("baby")}>
+            Baby
+          </button>
+        </div>
+        <div className="hover:border-b-4 border-red-500">
+          <button onClick={() => FilterItem("fashion")}>Fashion</button>
         </div>
       </div>
       <div className=" justify-center gap-2 mt-8 flex md:gap-10 items-center">
@@ -63,7 +61,7 @@ const Trend = () => {
         {Item?.map((val, i) => {
           if (i >= Start && i < End) {
             return (
-              <div key={i} className="">
+              <motion.div key={i}>
                 <Link
                   to={{
                     pathname: "/shop",
@@ -81,7 +79,7 @@ const Trend = () => {
                     </div>
                   </div>
                 </Link>
-              </div>
+              </motion.div>
             );
           }
         })}

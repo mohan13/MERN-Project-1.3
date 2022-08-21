@@ -69,7 +69,7 @@ const Toolbar = () => {
         <Sidebar/>
       </div>
       <div className={search? "hidden" : "flex"}>
-        <input type="text" className="border outline-none w-full m-4 p-4 text-lg"/>
+        <input type="text" className="text-center border-solid border-b-4 border-red-600 outline-none w-full m-2 md:m-4 text-md md:text-lg"/>
       </div>
       <div className="bg-black md:text-md text-white py-3">
         Sale Up To 50% Biggest Discounts. Hurry! Limited Perriod Offer Shop Now

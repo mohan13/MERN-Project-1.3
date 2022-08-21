@@ -37,7 +37,7 @@ const CatB = () => {
       {options.map((val, i) => {
         return (
           <div key={i} className="grid grid-cols-1">
-            <select>
+            <select className="outline-none ">
               <option>{val.cat1}</option>
               <option>{val.cat2}</option>
               <option>{val.cat3}</option>
@@ -59,20 +59,21 @@ const CatB = () => {
                   <div key={i} className="md:text-left">
                     <div className="my-4 text-lg font-bold">{val.label}</div>
                     <div className="flex gap-4 items-center">
-                     {/* <div className="w-4 h-4 rounded-full bg-red-300"> */}
-                     <Field
+                      {/* <div className="w-4 h-4 rounded-full bg-red-300"> */}
+                      <Field
                         type="checkbox"
                         name={val.name}
                         placeholder={val.placeholder}
+                        className="outline-none h-6 w-6 "
+                        color="red"
                       />
-                     {/* </div> */}
+                      {/* </div> */}
                       {val.title}
                       <ErrorMessage name={val.name} component={"div"} />
                     </div>
                   </div>
                 );
               })}
-              <button type="Submit">Submit</button>
             </Form>
           );
         }}

@@ -23,7 +23,7 @@ const CustomerFeedback = () => {
       {CustomerData?.map((val, i) => {
         if (i === index)
           return (
-            <div key={i} className="flex items-center justify-evenly">
+            <div key={i} className="flex items-center justify-between ">
               <button onClick={() => prevImage(i - 1)}>
                 <FaChevronLeft />
               </button>
@@ -40,11 +40,11 @@ const CustomerFeedback = () => {
                     <p className="text-sm md:text-lg leading-loose">
                       {val.para}
                     </p>
-                    <div className="flex gap-6 font-sans items-center my-4 ">
+                    <div className="flex gap-4 font-sans items-center my-4 mx-4 ">
                       <img src={val.profile} alt="" />
                       <div className="text-left leading-loose">
                         <div className="text-sm">{val.pflName}</div>
-                        <div className="text-stone-400 text-md">{val.post}</div>
+                        <div className="text-stone-400 text-sm">{val.post}</div>
                       </div>
                     </div>
                   </motion.div>
