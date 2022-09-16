@@ -36,8 +36,8 @@ const Trend = () => {
     <div className="md:mx-14 my-8 ">
       <h1 className="text-xl md:text-3xl">Trending This Week</h1>
 
-      <div className="flex  mt-4 px-2  md:gap-6 justify-between text-md md:text-xl  border-b-2">
-        <div className="hover:border-b-4 pb-4 hover:border-red-500">
+      <div className="flex mt-4 px-2 pb-4 md:gap-6 justify-between text-md md:text-xl  border-b-2">
+        <div className="hover:border-b-4 border-red-500">
           <button onClick={() => FilterItem("men")}>Men</button>
         </div>
         <div className="hover:border-b-4 border-red-500">
@@ -46,7 +46,7 @@ const Trend = () => {
           </button>
         </div>
         <div className="hover:border-b-4 border-red-500">
-          <button className="" onClick={() => FilterItem("baby")}>
+          <button onClick={() => FilterItem("baby")}>
             Baby
           </button>
         </div>
@@ -54,7 +54,7 @@ const Trend = () => {
           <button onClick={() => FilterItem("fashion")}>Fashion</button>
         </div>
       </div>
-      <div className=" justify-center gap-2 mt-8 flex md:gap-10 items-center">
+      <div className=" justify-between gap-2 mt-8 flex md:gap-10 items-center">
         <button onClick={() => prevImage()}>
           <FaChevronLeft color="gray" className="w-8 h-8" />
         </button>
@@ -72,8 +72,8 @@ const Trend = () => {
                   <div className="leading-8 ">
                     <div>
                       <img src={val.Image} alt="" />
-                      <div>
-                        <h1>{val.product}</h1>
+                      <div className=" md:text-lg">
+                        <div className="text-sm ">{val.product}</div>
                         <p>{val.price}</p>
                       </div>
                     </div>
