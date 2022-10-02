@@ -20,12 +20,10 @@ function App() {
             <Route path="/women" element={<Men/>} />
             <Route path="/shop" element={<ProductDetails />}/>
             <Route path="/cart" element={<Cart />}/>
-
             <Route path="/form1" element={<LoginForm1/>} />
             <Route path="/form2" element={<SignUpForm/>} />
             <Route path="/form2" element={<SignUpForm/>} />
             <Route path="/contact" element={<Contact/>} />
-
           </CstmSwtch>
         </Layout>
       </Router>
